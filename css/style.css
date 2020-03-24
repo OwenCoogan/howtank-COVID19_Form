@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 1.5rem
+}
+
+a {
+    color: inherit;
+    text-decoration: none;  
+
+}
+
+img {
+    max-width: 100%
+}
+
+
+h1,h2,h3,h4,a,p,span{
+font-family:'Source Sans Pro', sans-serif;
+text-align:center;
+margin-bottom:20px;
+
+}
+h1,h2,h3,h4{
+    font-weight:var(--title-font);
+    margin-top:20px;
+}
+a,p {
+    font-weight:var(--title-text);
+}
+
+:root {
+    --main-blue: #034b75;
+    --main-pink: #ff5ea0;
+    --main-yellow: #ffd005;
+    --main-green: #1bce6e;  
+    --fonts-grey: #566270;
+    --padding-btn:5px 20px;
+
+    --section-margin-bottom:100px;
+    --title-font: 700;
+    --title-text: 400;
+
+    --font-size-title:50px;
+    --font-size-subtitle:38px;
+    --btn-bdr-radius:50px;
+
+
+    /*Root for Mobile */
+
+    --font-size-title_mob:30px;
+    --font-size-subtitle_mob:18px;
+    
+}
+
+main::before{
+	background:url('../img/pattern_points_d_exclamation.png')  0 0 repeat;
+	background-size:30px;
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -20%;
+    left: -50%;
+    z-index: -1;
+    transform: rotate(15deg);
+    background-color: var(--main-blue);
+    background-size: cover;
+}
+
+.pdf--content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate( -50% , -50% );
+    background-color:white;
+    padding:50px;
+    width:80%;
+    color:var(--main-blue);
+}
+
+.pdf--content p {
+    color:var(--main-pink);
+}
+
+.pdf--content h3{
+    text-align: left;
+    text-decoration:underline;
+}
+
+.form--row{
+    display:flex;
+}
+.form--row h3{
+    display:block;
+    width:30%;
+}
+.form--writing-zone{
+    margin:auto;
+    background-color: rgba(27, 206, 110 , 0.3);
+    padding:10px;
+}
+.form--reason p {
+    color:var(--main-green);
+    margin-top:30px;
+}
