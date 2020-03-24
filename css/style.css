@@ -6,9 +6,10 @@
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
     -o-box-sizing: border-box;
-    box-sizing: border-box
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact;
 }
-
+@page { size:8.5in 11.4in; margin: 0 }
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
@@ -33,6 +34,7 @@ h1,h2,h3,h4,a,p,span{
 font-family:'Source Sans Pro', sans-serif;
 text-align:center;
 margin-bottom:20px;
+font-size: 14px;
 
 }
 h1,h2,h3,h4{
@@ -65,32 +67,26 @@ a,p {
     --font-size-title_mob:30px;
     --font-size-subtitle_mob:18px;
     
-}
+}   
 
-main::before{
-	background:url('../img/pattern_points_d_exclamation.png')  0 0 repeat;
-	background-size:30px;
-    content: "";
-    position: absolute;
-    width: 200%;
-    height: 200%;
-    top: -20%;
-    left: -50%;
-    z-index: -1;
-    transform: rotate(15deg);
+
+.pdf--bg{
     background-color: var(--main-blue);
-    background-size: cover;
+    position: relative;
+    padding: 50px;
 }
 
 .pdf--content{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate( -50% , -50% );
-    background-color:white;
-    padding:50px;
-    width:80%;
-    color:var(--main-blue);
+    background-color: white;
+    width: 95%;
+    padding: 20px;
+    margin: auto;
+    color: var(--main-blue);
+}
+
+.subtitle{
+    width:75%;
+    margin:25px auto;
 }
 
 .pdf--content p {
@@ -104,17 +100,203 @@ main::before{
 
 .form--row{
     display:flex;
+    position:relative;
 }
 .form--row h3{
     display:block;
     width:30%;
+    font-size: 12px;
 }
 .form--writing-zone{
     margin:auto;
     background-color: rgba(27, 206, 110 , 0.3);
     padding:10px;
+    margin-bottom:5px;
+}
+.form--writing-zone p{
+    margin-bottom:5px;
 }
 .form--reason p {
     color:var(--main-green);
     margin-top:30px;
+}
+
+.form--reason .form--writing-zone{
+    background-color:white;
+    width:80%;
+    margin-right:0;
+    
+
+}
+.form--reason .form--writing-zone p{
+    color:var(--main-blue);
+    text-align:left;
+    margin:5px;
+}
+.square--reason{
+    height: 20px;
+    width: 20px;
+    border: 1px solid var(--main-blue);
+    position: absolute;
+    top: 27px;
+    left: 50px;
+
+}
+
+.square--theme , .color-picker{
+    height: 20px;
+    width: 20px;
+    border: 1px solid var(--main-blue);
+    margin:auto 20px;
+}
+
+.square--reason-displaced{
+    top: 15px;
+}
+
+.form--row-yellow .square--reason{
+    background-color:var(--main-yellow);
+}
+
+.form--row-green .square--reason{
+    background-color:var(--main-green);
+}
+
+.form--row-pink .square--reason{
+    background-color:var(--main-pink);
+}
+
+.form--row-yellow .square--reason:nth-of-type(2){
+    top:40px;
+}
+
+.pdf--signature p {
+    color:var(--main-blue);
+}
+
+.pdf--signature p:nth-of-type(2) {
+    color:var(--main-green);
+}
+
+.title{
+    font-size:26px;
+}
+
+.signature--zone{
+    text-align:left;
+}
+.header {
+    padding: 12px 16px;
+    background: white;
+    color: var(--main-green);
+    display:flex;
+}
+header > * {
+    margin:auto;
+}
+
+/* Page content */
+.content {
+padding: 16px;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+position: fixed;
+top: 0;
+width: 100%;
+z-index:999;
+}
+.ht--logo{
+    width:120px;
+    margin-left:20px;
+}
+
+.pdf--modifier-toggle{
+    margin-right:20px;
+}
+
+
+/*PDF Modifier*/
+
+.pdf--modifier{
+    display:none;
+}
+
+.modifier--active{
+    display:flex;
+}
+
+.theme--pink{
+    background-color: var(--main-pink);
+}
+
+.theme--yellow{
+    background-color: var(--main-yellow);
+}
+
+.theme--green{
+    background-color: var(--main-green);
+}
+
+.header button {
+    width:150px;
+    padding:8px 13px;
+    color:white;
+    border-radius:50px;
+    background-color:var(--main-green);
+    border:0;
+}
+
+
+
+
+@media print {
+	header{
+        display:none;
+    }
+    .header{
+        display:none;
+    }
+}
+
+input[type="color"] {
+	-webkit-appearance: none;
+    border: none;
+    height: 20px;
+    width: 20px;
+    display:block;
+    margin:auto;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+	border: none;
+}
+
+.custom--color{
+    padding:10px;
+}
+
+.themes--picker{
+    padding:10px;
+}
+
+.flex--wrapper{
+    display:flex;
+}
+
+
+.flex--wrapper{
+    width:100%;
+}
+
+.themes--picker p,.flex--wrapper p {
+    text-align:center;
+}
+
+.custom--color , .themes--picker{
+    border:1px solid var(--main-blue);
+    margin:auto 5px ;
 }

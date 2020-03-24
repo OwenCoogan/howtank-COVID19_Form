@@ -7,52 +7,109 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <header>
-        <div class="pdf--modifier"></div>
+    <header class="header" id="header">
+        <img class="ht--logo" src="https://cdn.howtank.com/images/logo_hp_small@2x.png" alt="howtank logo">
+        
+        <div class="pdf--modifier modifier--inactive">
+            <div class="custom--color">
+                <p>Couleur personnalisée</p>
+                <input class="color-picker" type="color" value="#034b75">
+            </div>
+            <div class="themes--picker">
+                <p>Couleurs howtank</p>
+                <div class="flex--wrapper">
+                    <div class="square--theme theme--pink"></div>
+                    <div class="square--theme theme--yellow"></div>
+                    <div class="square--theme theme--green"></div>
+                </div>
+            </div>
+        </div>
+        <button class="pdf--modifier-toggle">Modifier le PDF</button>
+        <button class="pdf--modifier-DL">Télécharger le PDF</button>
     </header>
     <main>
-        <section class="pdf--viewer">
-            <div class="pdf--bg">
-                <div class="pdf--content">
-                    <h2>ATTESTATION DE DÉPLACEMENT DÉROGATOIRE</h2>
-                    <p>En application de l’article 1er du décret du 16 mars 2020 portant réglementation des déplacements dans le cadre de la lutte contre la propagation du virus Covid-19 :</p>
-                    <div class="form--holder">
-                        <h3>Je soussigné(e)</h3>
-                        <div class="form--row">
-                            <h3>Mme / M :</h3>
-                            <div class="form--writing-zone">
-                                <p>....................................................................................................................</p>
+        
+            <section class="pdf--viewer">
+                <div class="pdf--bg">
+                    <div class="pdf--content">
+                        <h2 class="title">ATTESTATION DE DÉPLACEMENT DÉROGATOIRE</h2>
+                        <p class="subtitle">En application de l’article 1er du décret du 16 mars 2020 portant réglementation des déplacements dans le cadre de la lutte contre la propagation du virus Covid-19 :</p>
+                        <div class="form--holder">
+                            <h3>Je soussigné(e)</h3>
+                            <div class="form--row">
+                                <h3>Mme / M :</h3>
+                                <div class="form--writing-zone">
+                                    <p>....................................................................................................................</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form--row">
-                            <h3>Né(e) le :</h3>
-                            <div class="form--writing-zone">
-                                <p>....................................................................................................................</p>
+                            <div class="form--row">
+                                <h3>Né(e) le :</h3>
+                                <div class="form--writing-zone">
+                                    <p>....................................................................................................................</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form--row">
-                            <h3>Demeurant :</h3>
-                            <div class="form--writing-zone">
-                                <p>....................................................................................................................</p>
-                                <p>....................................................................................................................</p>
-                                <p>....................................................................................................................</p>
+                            <div class="form--row">
+                                <h3>Demeurant :</h3>
+                                <div class="form--writing-zone">
+                                    <p>....................................................................................................................</p>
+                                    <p>....................................................................................................................</p>
+                                </div>
                             </div>
+                            
+                            
+                            
                         </div>
-                        <div class="form--reason">
+                        <div class="form--reason ">
                             <p>Certifie que mon déplacement est lié au motif suivant (cocher la case) autorisé par l’article 1er du décret du 16 mars 2020 portant réglementation des déplacements dans le cadre de la lutte contre la propagation du virus Covid-19 :</p>
+                            <div class="form--row form--row-green">
+                                <div class="square--reason"></div>
+                                <div class="form--writing-zone">
+                                    
+                                    <p>Déplacements entre le domicile et le lieu d’exercice de l’activité professionnelle, lorsqu’ils sont indispensables à l’exercice d’activités ne pouvant être organisées sous forme de télétravail (sur justificatif permanent) ou déplacements professionnels ne pouvant être différés </p>
+                                   
+                                </div>
+                            </div>
+                            <div class="form--row form--row-yellow">
+                                <div class="square--reason"></div>
+                                <div class="form--writing-zone">
+                                    <p> Déplacements pour effectuer des achats de première nécessité dans des établissements autorisés (liste sur gouvernement.fr) </p>
+                                </div>
+                            </div>
+                            
+                            <div class="form--row form--row-pink">
+                                <div class="square--reason"></div>
+                                <div class="form--writing-zone">
+                                    <p>Déplacements pour motif familial impérieux, pour l’assistance aux personnes vulnérables ou la garde d’enfants </p>
+                                </div>
+                            </div>
+                            <div class="form--row form--row-green">
+                                <div class="square--reason"></div>
+                                <div class="form--writing-zone">
+                                    <p>Déplacements brefs, à proximité du domicile, liés à l’activité physique individuelle des personnes, à l’exclusion de toute pratique sportive collective, et aux besoins des animaux de compagnie</p>
+                                </div>
+                            </div>
 
-
+                            <div class="form--row form--row-yellow">
+                                <div class="square--reason square--reason-displaced"></div>
+                                <div class="form--writing-zone">
+                                    <p>Déplacements pour motif de santé </p>
+                                </div>
+                            </div>
+                            
                         </div>
-                        
-                        
+                        <div class="pdf--signature">
+                            <p class="signature--zone">Fait à ................................., le......../	/2020<br>(signature)</p>
+                            <p>Tu as fini ce que tu devais faire ? Maintenant, rentre vite chez toi ! 
+                                Et si rien que l'idée de te retrouver entre tes 4 murs de déprime, rejoins nous sur la papote zone - les salons de discussions sur lesquels il n'y a QUE des gens sympas.</p>
+                        </div>
+
                     </div>
 
                 </div>
 
-            </div>
-
-        </section>
+            </section>
+        
     </main>
-    
+    <script src="js/app.js"></script>
 </body>
 </html>
