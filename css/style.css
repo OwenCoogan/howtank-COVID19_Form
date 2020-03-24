@@ -74,6 +74,7 @@ a,p {
     background-color: var(--main-blue);
     position: relative;
     padding: 50px;
+    overflow:hidden;
 }
 
 .pdf--content{
@@ -82,11 +83,12 @@ a,p {
     padding: 20px;
     margin: auto;
     color: var(--main-blue);
+    position:relative;
 }
 
 .subtitle{
     width:75%;
-    margin:25px auto;
+    margin:15px auto;
 }
 
 .pdf--content p {
@@ -118,7 +120,8 @@ a,p {
 }
 .form--reason p {
     color:var(--main-green);
-    margin-top:30px;
+    margin-top:15px;
+    margin-bottom:15px;
 }
 
 .form--reason .form--writing-zone{
@@ -132,6 +135,7 @@ a,p {
     color:var(--main-blue);
     text-align:left;
     margin:5px;
+    position:relative;
 }
 .square--reason{
     height: 20px;
@@ -180,6 +184,24 @@ a,p {
 
 .title{
     font-size:26px;
+    color:var(--main-green);
+}
+
+.exclamation--img{
+    position:absolute;
+    height:55px;
+    transform: rotate(8deg)
+}
+
+.exclamation--img:first-of-type{
+    top:50px;
+    left:25px;
+    
+}
+.exclamation--img:nth-last-of-type(2){
+    top:60px;
+    left:35px;
+    
 }
 
 .signature--zone{
@@ -220,11 +242,12 @@ z-index:999;
 /*PDF Modifier*/
 
 .pdf--modifier{
-    display:none;
+    opacity:0;
+    display:flex;
 }
 
 .modifier--active{
-    display:flex;
+    opacity:1;
 }
 
 .theme--pink{
@@ -238,6 +261,9 @@ z-index:999;
 .theme--green{
     background-color: var(--main-green);
 }
+.theme--default{
+    background-color: var(--main-blue);
+}
 
 .header button {
     width:150px;
@@ -247,16 +273,54 @@ z-index:999;
     background-color:var(--main-green);
     border:0;
 }
+.modal--wrapper,.mobile--version{
+    display:none;
+}
+.modal--active{
+    display:block !important;
+}
 
+.pdf--bg::before {
+    background: url(.https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/exclamation.svg) 0 0 repeat;
+    background-size: 30px;
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    z-index: 0;
+    transform: rotate(15deg);
+    opacity: .1;
+}
+.pdf--viewer{
+    max-width:805px;
+    margin:auto;
+}
+@media screen and ( max-width :805px){
+    .mobile--version{
+        display:block;
+    }
+
+    .pdf--viewer,.pdf--modifier-toggle{
+        display:none;
+    }
+}
 
 
 
 @media print {
-	header{
+	header,.header,.modal--wrapper,.mobile--version{
         display:none;
     }
     .header{
         display:none;
+    }
+    .subtitle{
+        margin-bottom:10px;
+    }
+    .form--holder h3{
+        margin-bottom:10px;
     }
 }
 
@@ -299,4 +363,24 @@ input[type="color"]::-webkit-color-swatch {
 .custom--color , .themes--picker{
     border:1px solid var(--main-blue);
     margin:auto 5px ;
+    border-radius:5px;
+}
+
+.custom--color p, .themes--picker p{
+    margin-bottom:8px;
+}
+.form--reason em{
+    position:absolute;
+    bottom: -2px;
+}
+
+.form--reason em img{
+    height:15px;
+    margin-left:10px;
+    
+}
+.pdf--modifier-DL{
+    border:1px solid var(--main-green);
+    border-radius:50px;
+    padding: 8px 13px;
 }

@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <header class="header" id="header">
+    <header class="header" id="header-custom">
         <img class="ht--logo" src="https://cdn.howtank.com/images/logo_hp_small@2x.png" alt="howtank logo">
         
-        <div class="pdf--modifier modifier--inactive">
+        <div class="pdf--modifier">
             <div class="custom--color">
                 <p>Couleur personnalisée</p>
                 <input class="color-picker" type="color" value="#034b75">
@@ -21,17 +21,21 @@
                     <div class="square--theme theme--pink"></div>
                     <div class="square--theme theme--yellow"></div>
                     <div class="square--theme theme--green"></div>
+                    <div class="square--theme theme--default"></div>
                 </div>
             </div>
         </div>
         <button class="pdf--modifier-toggle">Modifier le PDF</button>
-        <button class="pdf--modifier-DL">Télécharger le PDF</button>
+        <a class="pdf--modifier-DL" href="https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/d%C3%A9rogation_HTK_2.2.pdf">Télécharger le PDF</a>
     </header>
     <main>
         
             <section class="pdf--viewer">
                 <div class="pdf--bg">
+                    
                     <div class="pdf--content">
+                        <img class="exclamation--img" src="https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/exclamation--pink-large.png">
+                        <img class="exclamation--img" src="https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/exclamation--yellow-large.png">
                         <h2 class="title">ATTESTATION DE DÉPLACEMENT DÉROGATOIRE</h2>
                         <p class="subtitle">En application de l’article 1er du décret du 16 mars 2020 portant réglementation des déplacements dans le cadre de la lutte contre la propagation du virus Covid-19 :</p>
                         <div class="form--holder">
@@ -65,34 +69,34 @@
                                 <div class="square--reason"></div>
                                 <div class="form--writing-zone">
                                     
-                                    <p>Déplacements entre le domicile et le lieu d’exercice de l’activité professionnelle, lorsqu’ils sont indispensables à l’exercice d’activités ne pouvant être organisées sous forme de télétravail (sur justificatif permanent) ou déplacements professionnels ne pouvant être différés </p>
+                                    <p>Déplacements entre le domicile et le lieu d’exercice de l’activité professionnelle, lorsqu’ils sont indispensables à l’exercice d’activités ne pouvant être organisées sous forme de télétravail (sur justificatif permanent) ou déplacements professionnels ne pouvant être différés <em><img src="https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/exclamation--green-small.png" alt=""></em></p>
                                    
                                 </div>
                             </div>
                             <div class="form--row form--row-yellow">
                                 <div class="square--reason"></div>
                                 <div class="form--writing-zone">
-                                    <p> Déplacements pour effectuer des achats de première nécessité dans des établissements autorisés (liste sur gouvernement.fr) </p>
+                                    <p> Déplacements pour effectuer des achats de première nécessité dans des établissements autorisés (liste sur gouvernement.fr) <em><img src="https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/exclamation--yellow-small.png" alt=""></em> </p>
                                 </div>
                             </div>
                             
                             <div class="form--row form--row-pink">
                                 <div class="square--reason"></div>
                                 <div class="form--writing-zone">
-                                    <p>Déplacements pour motif familial impérieux, pour l’assistance aux personnes vulnérables ou la garde d’enfants </p>
+                                    <p>Déplacements pour motif familial impérieux, pour l’assistance aux personnes vulnérables ou la garde d’enfants <em><img src="https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/exclamation--pink-small.png" alt=""></em> </p>
                                 </div>
                             </div>
                             <div class="form--row form--row-green">
                                 <div class="square--reason"></div>
                                 <div class="form--writing-zone">
-                                    <p>Déplacements brefs, à proximité du domicile, liés à l’activité physique individuelle des personnes, à l’exclusion de toute pratique sportive collective, et aux besoins des animaux de compagnie</p>
+                                    <p>Déplacements brefs, à proximité du domicile, liés à l’activité physique individuelle des personnes, à l’exclusion de toute pratique sportive collective, et aux besoins des animaux de compagnie <em><img src="https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/exclamation--green-small.png" alt=""></em></p>
                                 </div>
                             </div>
 
                             <div class="form--row form--row-yellow">
                                 <div class="square--reason square--reason-displaced"></div>
                                 <div class="form--writing-zone">
-                                    <p>Déplacements pour motif de santé </p>
+                                    <p>Déplacements pour motif de santé  <em><img src="https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/exclamation--yellow-small.png" alt=""></em></p>
                                 </div>
                             </div>
                             
@@ -110,6 +114,22 @@
             </section>
         
     </main>
+    <div class="modal--wrapper">
+        <div class="help--modal">
+            <h3>Besoin d'aide?</h3>
+            <ul class="FAQ--questions">
+                <li><p>Vous pouvez modifier la couleur d'arrière plan à l'aide de l'outil en en-tête.</p></li>
+                <li><p>Vous pouvez ajouter une image.</p></li>
+                <li><p>Vous pouvez modifier la couleur d'arrière plan à l'aide de l'outil d'arrière-plan</p></li>
+                
+            </ul>
+        </div>
+    </div>
+    <div class="mobile--version">
+        <h3>La modification du formulaire n'est pas optimisée pour votre téléphone mobile</h3>
+        <p>Vous pouvez télécharger une version par défaut <a href="" class="pdf--link">ici</a>.</p>
+
+    </div>
     <script src="js/app.js"></script>
 </body>
 </html>
