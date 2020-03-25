@@ -17,11 +17,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
     
     function downloadRedirectionManager() {
         if ( color.value === '#034b75' ){
-            downloadPDF.innerText = "Télécharger le PDF par défault"
+            downloadPDF.style.display="none"
+            downloadPDFDefault.style.display="block"
        }
    
        else {
-           downloadPDF.innerText = "Télécharger votre PDF"
+            downloadPDF.style.display="block"
+            downloadPDFDefault.style.display="none"
        }
    
 
@@ -38,7 +40,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const themeGreen = document.querySelector('.theme--green');
     const themeYellow = document.querySelector('.theme--yellow');
     const themeDefault = document.querySelector('.theme--default');
-    const downloadPDF = document.querySelector('.pdf--modifier-DL');
+    const downloadPDF = document.querySelector('.pdf--modifier-DL-custom');
+    const downloadPDFDefault = document.querySelector('.pdf--modifier-DL-default');
   
 
     pdfModifierToolToggle.addEventListener("click",()=>{      
@@ -85,11 +88,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 
     
-    downloadPDF.addEventListener("click",()=>{      
-        if ( color.value === '#034b75' ){        
-            window.location.href = "http://www.w3schools.com";
-       }   
-       else if( color.value != '#034b75' ){
+    downloadPDF.addEventListener("click",()=>{
+         if( color.value != '#034b75' ){
            window.print();
        }
     });
@@ -122,6 +122,8 @@ Array.prototype.forEach.call( inputs, function( input )
         imgDlIcon.style.display='none';
         dropdownImageList.style.bottom='-60px';
         i++;
+        downloadPDFDefault.style.display='none';
+        downloadPDF.style.display='block';
         if ( i <= 2 ){
             var fileName = '';
             if( this.files && this.files.length > 1 )
@@ -155,7 +157,7 @@ Array.prototype.forEach.call( inputs, function( input )
 
 
         
-
+        
 		
 	});
 });

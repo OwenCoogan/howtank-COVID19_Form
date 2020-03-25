@@ -517,3 +517,6 @@ path{
     text-decoration:underline;
 
 }
+.pdf--modifier-DL-custom{
+    display:none;
+}
