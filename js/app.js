@@ -104,7 +104,11 @@ const photo = document.getElementById('file');
 
 const imgHolderCustom = document.querySelector('.uploaded--image');
 const imgHolderDefault = document.querySelector('.default-images');
-var inputs = document.querySelectorAll( '#file' );
+const inputs = document.querySelectorAll( '#file' );
+const imgDlIcon = document.querySelector('.icon--holder');
+
+const dropdownBtnImageList = document.querySelector('.toggle--dropdown');
+const dropdownImageList = document.querySelector('.input-list');
 
 Array.prototype.forEach.call( inputs, function( input )
 {
@@ -115,6 +119,8 @@ Array.prototype.forEach.call( inputs, function( input )
 	{
         imgHolderCustom.classList.add('img--custom')
         imgHolderDefault.style.display='none';
+        imgDlIcon.style.display='none';
+        dropdownImageList.style.bottom='-60px';
         i++;
         if ( i <= 2 ){
             var fileName = '';
@@ -154,8 +160,7 @@ Array.prototype.forEach.call( inputs, function( input )
 	});
 });
 
-const dropdownBtnImageList = document.querySelector('.toggle--dropdown');
-const dropdownImageList = document.querySelector('.input-list');
+
 
 dropdownBtnImageList.addEventListener("click",()=>{      
     dropdownImageList.classList.toggle('active')
