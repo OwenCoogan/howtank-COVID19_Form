@@ -97,6 +97,70 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     downloadRedirectionManager();
 
-    const styleSheet =document.querySelector('style')
-    const pageCommands = styleSheet[styleSheet.length - 1];
+/* Upload image */
+ 
+
+const photo = document.getElementById('file');
+
+const imgHolderCustom = document.querySelector('.uploaded--image');
+const imgHolderDefault = document.querySelector('.default-images');
+var inputs = document.querySelectorAll( '#file' );
+
+Array.prototype.forEach.call( inputs, function( input )
+{
+	const label	 = input.nextElementSibling,
+		labelVal = label.innerHTML;
+        i=0;
+	input.addEventListener( 'change', function( e )
+	{
+        imgHolderCustom.classList.add('img--custom')
+        imgHolderDefault.style.display='none';
+        i++;
+        if ( i <= 2 ){
+            var fileName = '';
+            if( this.files && this.files.length > 1 )
+                fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
+            else
+                fileName = e.target.value.split( '\'' ).pop();
+    
+            if( fileName )
+                label.querySelector( 'span' ).innerHTML = fileName;
+            else
+                label.innerHTML = labelVal;
+                
+            const holder = document.getElementById('imageholder');   
+                    var input = inputs[0];
+            var fReader = new FileReader();
+            fReader.readAsDataURL(input.files[0]);
+            fReader.onloadend = function(event){
+                holder.src = event.target.result;
+            }
+            console.log(i);
+            clone = input.cloneNode(true);
+            cloneLabel = label.cloneNode(true);
+            clone.classList.add('img--custom'+i)
+            document.body.appendChild(clone);
+            console.log(clone)
+            
+        }
+        else{
+            alert('vous n\'avez plus de place!')
+        }
+
+
+        
+
+		
+	});
+});
+
+const dropdownBtnImageList = document.querySelector('.toggle--dropdown');
+const dropdownImageList = document.querySelector('.input-list');
+
+dropdownBtnImageList.addEventListener("click",()=>{      
+    dropdownImageList.classList.toggle('active')
+
+});
+
+
 });

@@ -30,7 +30,7 @@ img {
 }
 
 
-h1,h2,h3,h4,a,p,span{
+h1,h2,h3,h4,a,p,span,label,strong,summary{
 font-family:'Source Sans Pro', sans-serif;
 text-align:center;
 margin-bottom:20px;
@@ -112,7 +112,7 @@ a,p {
 .form--writing-zone{
     margin:auto;
     background-color: rgba(27, 206, 110 , 0.3);
-    padding:10px;
+    padding:5px;
     margin-bottom:5px;
 }
 .form--writing-zone p{
@@ -281,7 +281,7 @@ z-index:999;
 }
 
 .pdf--bg::before {
-    background: url(.https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/exclamation.svg) 0 0 repeat;
+    background: url(https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/exclamation.svg) 0 0 repeat;
     background-size: 30px;
     content: "";
     position: absolute;
@@ -383,4 +383,63 @@ input[type="color"]::-webkit-color-swatch {
     border:1px solid var(--main-green);
     border-radius:50px;
     padding: 8px 13px;
+}
+
+input[type='file']{
+    width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.file--upload {
+        border:1px solid var(--main-green);
+        padding: 8px 13px;
+        border-radius: 50px;
+        margin-bottom:0;
+        display: inline-block;
+
+}
+
+.inputfile + label * {
+	pointer-events: none;
+}
+
+.uploaded--image{
+    display:none;
+}
+
+.img--custom{
+    display:block !important;
+    width: 20%;
+}
+
+.flex-wrapper{
+    display:flex;
+    position:relative;
+}
+
+.image--uploader{
+    border-radius: 3px;
+    background-color:white;
+    color:var(--main-green);
+    position:relative;
+    padding: 25px;
+}
+
+.input-list{
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    list-style: none;
+    z-index: 100;
+    background-color: white;
+    padding: 15px;
+    border:1px solid var(--main-blue);
+    display:none;
+}
+.active{
+    display:block !important;
 }

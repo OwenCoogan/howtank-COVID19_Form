@@ -11,6 +11,21 @@
         <img class="ht--logo" src="https://cdn.howtank.com/images/logo_hp_small@2x.png" alt="howtank logo">
         
         <div class="pdf--modifier">
+            <div class="image--uploader">
+                 <button class="toggle--dropdown">Liste d'images</button>   
+                 <ul class="input-list">
+                    <li class="list--items">
+                        <input type="file" name="file" id="file" class="inputfile" />
+                        <label for="file"><em></em><span>Choississez un fichier</span></label>
+                    </li>
+
+                 </ul>
+
+
+                
+            </div>
+            
+            
             <div class="custom--color">
                 <p>Couleur personnalisée</p>
                 <input class="color-picker" type="color" value="#034b75">
@@ -32,12 +47,27 @@
         
             <section class="pdf--viewer">
                 <div class="pdf--bg">
-                    
                     <div class="pdf--content">
-                        <img class="exclamation--img" src="https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/exclamation--pink-large.png">
-                        <img class="exclamation--img" src="https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/exclamation--yellow-large.png">
-                        <h2 class="title">ATTESTATION DE DÉPLACEMENT DÉROGATOIRE</h2>
-                        <p class="subtitle">En application de l’article 1er du décret du 16 mars 2020 portant réglementation des déplacements dans le cadre de la lutte contre la propagation du virus Covid-19 :</p>
+                        <div class="flex-wrapper">      
+
+                            <div class="uploaded--image">
+                                <img src="" id="imageholder" alt="Image ajoutée par l'utilisateur">
+
+                            </div>
+                            <div class="default-images">
+                                
+                            <img class="exclamation--img" src="https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/exclamation--pink-large.png">
+                            <img class="exclamation--img" src="https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/exclamation--yellow-large.png">
+
+                            </div>
+                            <div class="title--holder">
+                                <h2 class="title">ATTESTATION DE DÉPLACEMENT DÉROGATOIRE</h2>
+                                <p class="subtitle">En application de l’article 3 du décret du 23 mars 2020 prescrivant les mesures générales
+                                    nécessaires pour faire face à l’épidémie de Covid19 dans le cadre de l’état d’urgence sanitaire </p>
+                            </div>
+
+                        </div>    
+                       
                         <div class="form--holder">
                             <h3>Je soussigné(e)</h3>
                             <div class="form--row">
@@ -53,9 +83,14 @@
                                 </div>
                             </div>
                             <div class="form--row">
-                                <h3>Demeurant :</h3>
+                                <h3>À :</h3>
                                 <div class="form--writing-zone">
                                     <p>....................................................................................................................</p>
+                                </div>
+                            </div>
+                            <div class="form--row">
+                                <h3>Demeurant :</h3>
+                                <div class="form--writing-zone">
                                     <p>....................................................................................................................</p>
                                 </div>
                             </div>
@@ -97,6 +132,12 @@
                                 <div class="square--reason square--reason-displaced"></div>
                                 <div class="form--writing-zone">
                                     <p>Déplacements pour motif de santé  <em><img src="https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/exclamation--yellow-small.png" alt=""></em></p>
+                                </div>
+                            </div>
+                            <div class="form--row form--row-pink">
+                                <div class="square--reason"></div>
+                                <div class="form--writing-zone">
+                                    <p>Déplacements pour motif familial impérieux, pour l’assistance aux personnes vulnérables ou la garde d’enfants <em><img src="https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/exclamation--pink-small.png" alt=""></em> </p>
                                 </div>
                             </div>
                             
