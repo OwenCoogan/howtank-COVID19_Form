@@ -42,6 +42,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const themeDefault = document.querySelector('.theme--default');
     const downloadPDF = document.querySelector('.pdf--modifier-DL-custom');
     const downloadPDFDefault = document.querySelector('.pdf--modifier-DL-default');
+
+    const imgHolderCustom = document.querySelector('.uploaded--image');
+    const imgHolderDefault = document.querySelector('.default-images');
+    const inputs = document.querySelectorAll( '#file' );
+    const imgDlIcon = document.querySelector('.icon--holder');
+
+    const dropdownBtnImageList = document.querySelector('.toggle--dropdown');
+    const dropdownImageList = document.querySelector('.input-list');
   
 
     pdfModifierToolToggle.addEventListener("click",()=>{      
@@ -73,7 +81,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const blueColor= "#034b75";
         backgroundForm.style.backgroundColor = blueColor;
         color.value=blueColor;
-        downloadRedirectionManager();
+        if ( imgHolderCustom.classList.contains('img--custom')){
+            
+        }
+
+        else{
+            downloadRedirectionManager();
+        }
+       
     });
 
     const color = document.querySelector(".color-picker");
@@ -100,67 +115,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
 /* Upload image */
  
 
-const photo = document.getElementById('file');
-
-const imgHolderCustom = document.querySelector('.uploaded--image');
-const imgHolderDefault = document.querySelector('.default-images');
-const inputs = document.querySelectorAll( '#file' );
-const imgDlIcon = document.querySelector('.icon--holder');
-
-const dropdownBtnImageList = document.querySelector('.toggle--dropdown');
-const dropdownImageList = document.querySelector('.input-list');
-
-Array.prototype.forEach.call( inputs, function( input )
-{
-	const label	 = input.nextElementSibling,
-		labelVal = label.innerHTML;
-        i=0;
-	input.addEventListener( 'change', function( e )
-	{
-        imgHolderCustom.classList.add('img--custom')
-        imgHolderDefault.style.display='none';
-        imgDlIcon.style.display='none';
-        dropdownImageList.style.bottom='-60px';
-        i++;
-        downloadPDFDefault.style.display='none';
-        downloadPDF.style.display='block';
-        if ( i <= 2 ){
-            var fileName = '';
-            if( this.files && this.files.length > 1 )
-                fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
-            else
-                fileName = e.target.value.split( '\'' ).pop();
-    
-            if( fileName )
-                label.querySelector( 'span' ).innerHTML = fileName;
-            else
-                label.innerHTML = labelVal;
-                
-            const holder = document.getElementById('imageholder');   
-                    var input = inputs[0];
-            var fReader = new FileReader();
-            fReader.readAsDataURL(input.files[0]);
-            fReader.onloadend = function(event){
-                holder.src = event.target.result;
-            }
-            console.log(i);
-            clone = input.cloneNode(true);
-            cloneLabel = label.cloneNode(true);
-            clone.classList.add('img--custom'+i)
-            document.body.appendChild(clone);
-            console.log(clone)
-            
-        }
-        else{
-            alert('vous n\'avez plus de place!')
-        }
 
 
-        
-        
-		
-	});
-});
+
 
 
 
@@ -168,6 +125,36 @@ dropdownBtnImageList.addEventListener("click",()=>{
     dropdownImageList.classList.toggle('active')
 
 });
+
+/* avatar modal tool */
+const avatarUploadModalButton = document.querySelector('.avatar--modal-toggle');
+const avatarUploadModal = document.querySelector('.modal--wrapper');
+
+avatarUploadModalButton.addEventListener("click",()=>{      
+    avatarUploadModal.classList.toggle('active');
+    dropdownImageList.classList.toggle('active')
+});
+
+const avatars = document.querySelectorAll('.avatar--holder img')
+const holder = document.getElementById('imageholder');  
+    Array.prototype.forEach.call( avatars, function( avatar )
+    {
+    avatar.addEventListener("click",()=>{
+        holder.src=avatar.src;
+        avatarUploadModal.classList.toggle('active');
+        imgHolderCustom.classList.add('img--custom')
+        imgHolderDefault.style.display='none';
+        downloadPDF.style.display="block"
+        downloadPDFDefault.style.display="none"
+    
+        
+    
+    });
+            
+          
+           
+        
+    });
 
 
 });

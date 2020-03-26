@@ -128,7 +128,7 @@ a,p {
 .pdf--bg{
     background-color: var(--main-blue);
     position: relative;
-    padding: 50px;
+    padding: 48px 50px;
     overflow:hidden;
 }
 
@@ -219,7 +219,7 @@ a,p {
 }
 
 .square--reason-displaced{
-    top: 15px;
+    top: 10px;
 }
 
 .form--row-yellow .square--reason{
@@ -234,6 +234,12 @@ a,p {
     background-color:var(--main-pink);
 }
 
+#square--offset1{
+    top:20px;
+}
+#square--last--offset{
+    top:10px;
+}
 .form--row-yellow .square--reason:nth-of-type(2){
     top:40px;
 }
@@ -276,6 +282,8 @@ a,p {
     background: #F5F5F5;
     color: var(--main-green);
     display:flex;
+    z-index:900;
+    margin-top:0;
 
 }
 header > * {
@@ -345,6 +353,42 @@ z-index:999;
     display:block !important;
 }
 
+.modal--wrapper{
+    width:100%;
+    background-color:rgba(0,0,0,0.3);
+    position:absolute;
+    top:0;
+    left:0;
+}
+.avatar--modal{
+    padding:100px;
+    background-color:white;
+    width: 80%;
+    margin: 45px auto
+}
+
+
+.image-row{
+    display:flex;
+    list-style: none;
+}
+
+.avatar--holder{
+    width:15%;
+    margin:auto;    
+}
+
+.avatar--holder img{
+    max-width:145px;
+}
+
+.avatar--modal h3{
+    color:var(--main-blue);
+    font-size:28px;
+}
+.last--row .avatar--holder{
+    margin:10px;
+}
 .pdf--bg::before {
     background: url(https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/exclamation.svg) 0 0 repeat;
     background-size: 30px;
@@ -376,6 +420,11 @@ z-index:999;
 }
 .list--items span{
     margin-bottom:0;
+    text-align:left;
+}
+
+.avatar--modal-toggle .icon--holder{
+    margin-top:8px;
 }
 
 .list--items{
@@ -557,11 +606,9 @@ input[type='file']{
     display:none;
     width:100%;
 }
-path{
-    color:green;
-}
 .active{
     display:block !important;
+    margin-top: 105px;
 }
 
 .icon--holder{
@@ -569,10 +616,14 @@ path{
     margin-right: 10px;
 }
 
-.input-list:hover span{
+.list--items:hover span{
 
     text-decoration:underline;
+    cursor: pointer;
 
+}
+header button,.square--theme ,.color-picker{
+    cursor:pointer;
 }
 .pdf--modifier-DL-custom{
     display:none;

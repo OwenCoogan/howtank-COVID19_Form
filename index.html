@@ -10,7 +10,7 @@
     <header class="header" id="header-custom">
         <img class="ht--logo" src="https://cdn.howtank.com/images/logo_hp_small@2x.png" alt="howtank logo">
         
-        <div class="pdf--modifier">
+        <div class="pdf--modifier modifier--inactive">
             <div class="image--uploader">
                  <button class="toggle--dropdown">Liste d'images</button>   
                  <ul class="input-list">
@@ -22,6 +22,9 @@
 
 
                         </em><span>Choississez un fichier</span></label>
+                    </li>
+                    <li class="list--items avatar--modal-toggle"><em class="icon--holder"><img src="https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/avatars/avatar-01.png">
+                    </em><span>Choississez un avatar howtank</span></label>
                     </li>
 
                  </ul>
@@ -45,7 +48,7 @@
                 </div>
             </div>
         </div>
-        <button class="pdf--modifier-toggle">Modifier le PDF</button>
+        <button class="pdf--modifier-toggle ">Modifier le PDF</button>
         <a class="pdf--modifier-DL pdf--modifier-DL-default" href="https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/d%C3%A9rogation_HTK_2.2.pdf">Télécharger le PDF par défaut</a>
         <a class="pdf--modifier-DL pdf--modifier-DL-custom " onclick="window.print()">Télécharger votre PDF</a>
     </header>
@@ -115,7 +118,7 @@
                                 </div>
                             </div>
                             <div class="form--row form--row-yellow">
-                                <div class="square--reason"></div>
+                                <div class="square--reason" id="square--offset1"></div>
                                 <div class="form--writing-zone">
                                     <p> Déplacements pour effectuer des achats de première nécessité dans des établissements autorisés (liste sur gouvernement.fr) <em><img src="https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/exclamation--yellow-small.png" alt=""></em> </p>
                                 </div>
@@ -150,8 +153,8 @@
                                         <em><img src="https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/exclamation--yellow-small.png" alt=""></em></p>
                                 </div>
                             </div>
-                            <div class="form--row form--row-pink">
-                                <div class="square--reason"></div>
+                            <div class="form--row form--row-pink" >
+                                <div class="square--reason" id="square--last--offset"></div>
                                 <div class="form--writing-zone">
                                     <p>Participation à des missions d’intérêt général sur demande de l’autorité administrative<em><img src="https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/exclamation--pink-small.png" alt=""></em> </p>
                                 </div>
@@ -172,13 +175,44 @@
            
     </main>
     <div class="modal--wrapper">
-        <div class="help--modal">
-            <h3>Besoin d'aide?</h3>
-            <ul class="FAQ--questions">
-                <li><p>Vous pouvez modifier la couleur d'arrière plan à l'aide de l'outil en en-tête.</p></li>
-                <li><p>Vous pouvez ajouter une image.</p></li>
-                <li><p>Vous pouvez modifier la couleur d'arrière plan à l'aide de l'outil d'arrière-plan</p></li>
-                
+        <div class="avatar--modal">
+            <h3>Choississez un avatar</h3>
+            <ul class="image-row">
+                <li class="avatar--holder"><img src="https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/avatars/avatar-01.png"></li>
+                <li class="avatar--holder"><img src="https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/avatars/avatar-02.png"></li>
+                <li class="avatar--holder"><img src="https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/avatars/avatar-03.png"></li>
+                <li class="avatar--holder"><img src="https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/avatars/avatar-04.png"></li>
+                <li class="avatar--holder"><img src="https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/avatars/avatar-05.png"></li>
+                <li class="avatar--holder"><img src="https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/avatars/avatar-06.png"></li>                             
+            </ul>
+            <ul class="image-row">
+                <li class="avatar--holder"><img src="https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/avatars/avatar-07.png"></li>
+                <li class="avatar--holder"><img src="https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/avatars/avatar-25.png"></li>
+                <li class="avatar--holder"><img src="https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/avatars/avatar-09.png"></li>
+                <li class="avatar--holder"><img src="https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/avatars/avatar-10.png"></li>
+                <li class="avatar--holder"><img src="https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/avatars/avatar-11.png"></li>
+                <li class="avatar--holder"><img src="https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/avatars/avatar-12.png"></li>                             
+            </ul>
+            <ul class="image-row">
+                <li class="avatar--holder"><img src="https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/avatars/avatar-13.png"></li>
+                <li class="avatar--holder"><img src="https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/avatars/avatar-14.png"></li>
+                <li class="avatar--holder"><img src="https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/avatars/avatar-15.png"></li>
+                <li class="avatar--holder"><img src="https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/avatars/avatar-16.png"></li>
+                <li class="avatar--holder"><img src="https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/avatars/avatar-17.png"></li>
+                <li class="avatar--holder"><img src="https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/avatars/avatar-18.png"></li>                             
+            </ul>
+            <ul class="image-row">
+                <li class="avatar--holder"><img src="https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/avatars/avatar-19.png"></li>
+                <li class="avatar--holder"><img src="https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/avatars/avatar-20.png"></li>
+                <li class="avatar--holder"><img src="https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/avatars/avatar-21.png"></li>
+                <li class="avatar--holder"><img src="https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/avatars/avatar-22.png"></li>
+                <li class="avatar--holder"><img src="https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/avatars/avatar-23.png"></li>
+                <li class="avatar--holder"><img src="https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/avatars/avatar-24.png"></li>                             
+            </ul>
+            <ul class="image-row last--row">
+                <li class="avatar--holder"><img src="https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/avatars/avatar-26.png"></li>
+                <li class="avatar--holder"><img src="https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/avatars/avatar-27-11.png"></li>
+                <li class="avatar--holder"><img src="https://howtank-assets-fr.s3.eu-west-3.amazonaws.com/images/covid-19-assets/avatars/profil-par-défaut.png"></li>                             
             </ul>
         </div>
     </div>
